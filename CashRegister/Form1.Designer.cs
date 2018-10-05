@@ -49,6 +49,7 @@
             this.numberOfDrinks = new System.Windows.Forms.TextBox();
             this.numberOfFries = new System.Windows.Forms.TextBox();
             this.numberOfBurger = new System.Windows.Forms.TextBox();
+            this.newOrder = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // changeAmount
@@ -73,11 +74,11 @@
             // printReciept
             // 
             this.printReciept.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printReciept.Location = new System.Drawing.Point(59, 482);
+            this.printReciept.Location = new System.Drawing.Point(43, 482);
             this.printReciept.Name = "printReciept";
-            this.printReciept.Size = new System.Drawing.Size(114, 29);
+            this.printReciept.Size = new System.Drawing.Size(144, 29);
             this.printReciept.TabIndex = 18;
-            this.printReciept.Text = "Print Reciept";
+            this.printReciept.Text = "Print New Reciept";
             this.printReciept.UseVisualStyleBackColor = true;
             this.printReciept.Click += new System.EventHandler(this.printReciept_Click);
             // 
@@ -230,12 +231,24 @@
             this.numberOfBurger.Size = new System.Drawing.Size(65, 18);
             this.numberOfBurger.TabIndex = 0;
             // 
+            // newOrder
+            // 
+            this.newOrder.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newOrder.Location = new System.Drawing.Point(356, 482);
+            this.newOrder.Name = "newOrder";
+            this.newOrder.Size = new System.Drawing.Size(113, 29);
+            this.newOrder.TabIndex = 21;
+            this.newOrder.Text = "New Order";
+            this.newOrder.UseVisualStyleBackColor = true;
+            this.newOrder.Click += new System.EventHandler(this.newOrder_Click);
+            // 
             // mcdonaldsLite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(530, 556);
+            this.Controls.Add(this.newOrder);
             this.Controls.Add(this.changeAmount);
             this.Controls.Add(this.changeTextx);
             this.Controls.Add(this.printReciept);
@@ -286,6 +299,7 @@
         private System.Windows.Forms.TextBox numberOfDrinks;
         private System.Windows.Forms.TextBox numberOfFries;
         private System.Windows.Forms.TextBox numberOfBurger;
+        private System.Windows.Forms.Button newOrder;
     }
 }
 

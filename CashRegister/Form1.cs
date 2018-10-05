@@ -13,10 +13,10 @@ namespace CashRegister
 {
     public partial class mcdonaldsLite : Form
     {
-        int burgerNumber;
-        int friesNumber;
-        int drinkNumber;
-        int paidNumber;
+        double burgerNumber;
+        double friesNumber;
+        double drinkNumber;
+        double paidNumber;
         double burgerCost;
         double friesCost;
         double drinkCost;
@@ -66,15 +66,20 @@ namespace CashRegister
         private void burgerTim_Shown(object sender, EventArgs e)
         {
             Graphics g = this.CreateGraphics();
+            Font litePen = new Font("Lucida Console", 5, FontStyle.Regular);
             SolidBrush backBrush = new SolidBrush(Color.Red);
             SolidBrush borderBrush = new SolidBrush(Color.Gold);
             Pen goldenArches = new Pen(Color.Gold, 10);
+            Pen goldLine = new Pen(Color.Gold, 17);
 
             g.FillRectangle(borderBrush, 240, 10, 20, 530);
             g.FillRectangle(borderBrush, 10, 300, 240, 20);
-            g.DrawArc(goldenArches, 275, 300, 90, 180, 130, 280);
-            g.DrawArc(goldenArches, 350, 300, 90, 180, 130, 280);
-            g.FillRectangle(backBrush, 350, 330, 20, 530);
+            g.DrawArc(goldenArches, 275, 320, 90, 180, 130, 280);
+            g.DrawArc(goldenArches, 350, 320, 90, 180, 130, 280);
+            g.FillRectangle(backBrush, 330, 350, 50, 530);
+            g.FillRectangle(backBrush, 265, 440, 500, 100);
+            g.DrawLine(goldLine, 358, 350, 358, 440);
+            g.DrawString("LITE", litePen, borderBrush, 450, 430);
         }
 
         private void calculateChange_Click(object sender, EventArgs e)
@@ -142,6 +147,22 @@ namespace CashRegister
 
             g.DrawString("Have A Day :(", reciept, penColor, 275, 285);
             Thread.Sleep(1000);
+        }
+
+        private void newOrder_Click(object sender, EventArgs e)
+        {
+            Graphics g = this.CreateGraphics();
+            SolidBrush recieptBackColor = new SolidBrush(Color.White);
+
+            numberOfBurger.Text = "";
+            numberOfDrinks.Text = "";
+            numberOfFries.Text = "";
+            subPrice.Text = "";
+            taxPrice.Text = "";
+            totalPrice.Text = "";
+            paidAmount.Text = "";
+            changeAmount.Text = "";
+            g.FillRectangle(recieptBackColor, 275, 15, 240, 290);
         }
     }
 }
