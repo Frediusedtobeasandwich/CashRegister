@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 namespace CashRegister
 {
@@ -70,7 +71,7 @@ namespace CashRegister
             SolidBrush backBrush = new SolidBrush(Color.Red);
             SolidBrush borderBrush = new SolidBrush(Color.Gold);
             Pen goldenArches = new Pen(Color.Gold, 10);
-            Pen goldLine = new Pen(Color.Gold, 17);
+            Pen goldLine = new Pen(Color.Gold, 18);
 
             g.FillRectangle(borderBrush, 240, 10, 20, 530);
             g.FillRectangle(borderBrush, 10, 300, 240, 20);
@@ -91,7 +92,7 @@ namespace CashRegister
 
             catch
             {
-                changeAmount.Text = "PAY!";
+                changeAmount.Text = "";
             }
 
 
@@ -106,53 +107,73 @@ namespace CashRegister
             SolidBrush penColor = new SolidBrush(Color.Black);
             SolidBrush recieptBackColor = new SolidBrush(Color.White);
 
+            SoundPlayer register = new SoundPlayer(Properties.Resources.cash);
+
             g.FillRectangle(penColor, 270, 10, 250, 300);
             g.FillRectangle(recieptBackColor, 275, 15, 240, 290);
 
-
+            register.Play();
             Thread.Sleep(500);
+            register.Play();
             g.DrawString("McDonalds Lite", reciept, penColor, 340, 40);
             Thread.Sleep(500);
+            register.Play();
             g.DrawString("Order Number 6943", reciept, penColor, 275, 70);
             Thread.Sleep(500);
+            register.Play();
             g.DrawString("October 15th, 2018", reciept, penColor, 275, 85);
-            Thread.Sleep(1900);
+            Thread.Sleep(500);
+            register.Play();
+            Thread.Sleep(500);
 
             g.DrawString("Hamburgers: ", reciept, penColor, 275, 120);
             g.DrawString("x" + burgerNumber + " @ " + BURGER_COST + "", reciept, penColor, 380, 120);
+            register.Play();
             Thread.Sleep(500);
             g.DrawString("Fries:", reciept, penColor, 275, 135);
             g.DrawString("x" + friesNumber + " @ " + FRIES_COST + "", reciept, penColor, 380, 135);
+            register.Play();
             Thread.Sleep(500);
             g.DrawString("Drinks:", reciept, penColor, 275, 150);
             g.DrawString("x" + drinkNumber + " @ " + DRINKS_COST + "", reciept, penColor, 380, 150);
-            Thread.Sleep(1000);
+            register.Play();
+            Thread.Sleep(500);
+            register.Play();
+            Thread.Sleep(500);
 
             g.DrawString("Sub Total:", reciept, penColor, 275, 180);
             g.DrawString(subCost.ToString("C"), reciept, penColor, 380, 180);
+            register.Play();
             Thread.Sleep(500);
             g.DrawString("Tax:", reciept, penColor, 275, 195);
             g.DrawString(tax.ToString("C"), reciept, penColor, 380, 195);
+            register.Play();
             Thread.Sleep(500);
             g.DrawString("Total:", reciept, penColor, 275, 210);
             g.DrawString(totalCost.ToString("C"), reciept, penColor, 380, 210);
+            register.Play();
             Thread.Sleep(1000);
 
             g.DrawString("Tendered:", reciept, penColor, 275, 240);
             g.DrawString(paidNumber.ToString("C"), reciept, penColor, 380, 240);
+            register.Play();
             Thread.Sleep(500);
             g.DrawString("Change:", reciept, penColor, 275, 255);
             g.DrawString(change.ToString("C"), reciept, penColor, 380, 255);
-            Thread.Sleep(1000);
+            register.Play();
+            Thread.Sleep(500);
+            register.Play();
+            Thread.Sleep(500);
 
             g.DrawString("Have A Day :(", reciept, penColor, 275, 285);
+            register.Play();
             Thread.Sleep(1000);
         }
 
         private void newOrder_Click(object sender, EventArgs e)
         {
             Graphics g = this.CreateGraphics();
-            SolidBrush recieptBackColor = new SolidBrush(Color.White);
+            SolidBrush backColor = new SolidBrush(Color.Red);
 
             numberOfBurger.Text = "";
             numberOfDrinks.Text = "";
@@ -162,7 +183,7 @@ namespace CashRegister
             totalPrice.Text = "";
             paidAmount.Text = "";
             changeAmount.Text = "";
-            g.FillRectangle(recieptBackColor, 275, 15, 240, 290);
+            g.FillRectangle(backColor, 270, 10, 250, 300);
         }
     }
 }
