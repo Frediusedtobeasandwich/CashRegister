@@ -121,7 +121,7 @@ namespace CashRegister
             g.DrawString("Order Number 6943", reciept, penColor, 275, 70);
             Thread.Sleep(500);
             register.Play();
-            g.DrawString("October 15th, 2018", reciept, penColor, 275, 85);
+            g.DrawString("October 12th, 2018", reciept, penColor, 275, 85);
             Thread.Sleep(500);
             register.Play();
             Thread.Sleep(500);
