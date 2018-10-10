@@ -49,6 +49,7 @@ namespace CashRegister
                 subPrice.Text = "0";
                 taxPrice.Text = "0";
                 totalPrice.Text = "0";
+                warning.Text = "Check Values";
             }
 
             burgerCost = burgerNumber * BURGER_COST;
@@ -94,61 +95,61 @@ namespace CashRegister
             g.FillRectangle(recieptBackColor, 275, 15, 240, 290);
 
             register.Play();
-            Thread.Sleep(1000);
+            Thread.Sleep(700);
             register.Play();
             g.DrawString("McDonalds Lite", reciept, penColor, 340, 40);
-            Thread.Sleep(1000);
+            Thread.Sleep(700);
             register.Play();
             g.DrawString("Order Number 6488", reciept, penColor, 275, 70);
-            Thread.Sleep(1000);
+            Thread.Sleep(700);
             register.Play();
             g.DrawString("October 15th, 2018", reciept, penColor, 275, 85);
-            Thread.Sleep(1000);
+            Thread.Sleep(700);
             register.Play();
-            Thread.Sleep(1000);
+            Thread.Sleep(700);
 
             g.DrawString("Hamburgers: ", reciept, penColor, 275, 120);
             g.DrawString("x" + burgerNumber + " @ " + BURGER_COST + "", reciept, penColor, 380, 120);
             register.Play();
-            Thread.Sleep(1000);
+            Thread.Sleep(700);
             g.DrawString("Fries:", reciept, penColor, 275, 135);
             g.DrawString("x" + friesNumber + " @ " + FRIES_COST + "", reciept, penColor, 380, 135);
             register.Play();
-            Thread.Sleep(1000);
+            Thread.Sleep(700);
             g.DrawString("Drinks:", reciept, penColor, 275, 150);
             g.DrawString("x" + drinkNumber + " @ " + DRINKS_COST + "", reciept, penColor, 380, 150);
             register.Play();
-            Thread.Sleep(1000);
+            Thread.Sleep(700);
             register.Play();
-            Thread.Sleep(1000);
+            Thread.Sleep(700);
 
             g.DrawString("Sub Total:", reciept, penColor, 275, 180);
             g.DrawString(subCost.ToString("C"), reciept, penColor, 380, 180);
             register.Play();
-            Thread.Sleep(1000);
+            Thread.Sleep(700);
             g.DrawString("Tax:", reciept, penColor, 275, 195);
             g.DrawString(tax.ToString("C"), reciept, penColor, 380, 195);
             register.Play();
-            Thread.Sleep(1000);
+            Thread.Sleep(700);
             g.DrawString("Total:", reciept, penColor, 275, 210);
             g.DrawString(totalCost.ToString("C"), reciept, penColor, 380, 210);
             register.Play();
-            Thread.Sleep(1000);
+            Thread.Sleep(700);
 
             g.DrawString("Tendered:", reciept, penColor, 275, 240);
             g.DrawString(paidNumber.ToString("C"), reciept, penColor, 380, 240);
             register.Play();
-            Thread.Sleep(1000);
+            Thread.Sleep(700);
             g.DrawString("Change:", reciept, penColor, 275, 255);
             g.DrawString(change.ToString("C"), reciept, penColor, 380, 255);
             register.Play();
-            Thread.Sleep(1000);
+            Thread.Sleep(700);
             register.Play();
-            Thread.Sleep(1000);
+            Thread.Sleep(700);
 
             g.DrawString("Have A Day :(", reciept, penColor, 275, 285);
             register.Play();
-            Thread.Sleep(1000);
+            Thread.Sleep(700);
         }
 
         private void newOrder_Click(object sender, EventArgs e)

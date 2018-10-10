@@ -54,6 +54,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.warning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // changeAmount
@@ -115,10 +116,10 @@
             // paidAmount
             // 
             this.paidAmount.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paidAmount.Location = new System.Drawing.Point(152, 355);
+            this.paidAmount.Location = new System.Drawing.Point(155, 355);
             this.paidAmount.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.paidAmount.Name = "paidAmount";
-            this.paidAmount.Size = new System.Drawing.Size(66, 18);
+            this.paidAmount.Size = new System.Drawing.Size(63, 18);
             this.paidAmount.TabIndex = 13;
             // 
             // totalPrice
@@ -279,9 +280,9 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(222, 9);
+            this.label1.Location = new System.Drawing.Point(223, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 538);
+            this.label1.Size = new System.Drawing.Size(34, 538);
             this.label1.TabIndex = 23;
             // 
             // label2
@@ -304,12 +305,22 @@
             this.label4.TabIndex = 26;
             this.label4.Text = "LITE";
             // 
+            // warning
+            // 
+            this.warning.AutoSize = true;
+            this.warning.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warning.Location = new System.Drawing.Point(10, 9);
+            this.warning.Name = "warning";
+            this.warning.Size = new System.Drawing.Size(0, 11);
+            this.warning.TabIndex = 27;
+            // 
             // mcdonaldsLite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(530, 556);
+            this.Controls.Add(this.warning);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -370,6 +381,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label warning;
     }
 }
 
