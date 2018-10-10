@@ -58,6 +58,8 @@ namespace CashRegister
             subCost = burgerCost + friesCost + drinkCost;
             subPrice.Text = subCost.ToString("C");
 
+            warning.Text = "";
+
             tax = subCost * HST;
             taxPrice.Text = tax.ToString("C");
 
