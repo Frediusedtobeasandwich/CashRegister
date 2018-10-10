@@ -68,5 +68,34 @@ namespace CashRegister.Properties {
                 return ResourceManager.GetStream("cash", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download__2_ {
+            get {
+                object obj = ResourceManager.GetObject("download__2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mcdonalds {
+            get {
+                object obj = ResourceManager.GetObject("mcdonalds", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://www.google.ca/url?sa=i&amp;rct=j&amp;q=&amp;esrc=s&amp;source=images&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwjAwqiRnPzdAhWkq4MKHQ3VDYMQjRx6BAgBEAU&amp;url=https%3A%2F%2Fwww.facebook.com%2FGolden-Arches-Development-Corp-Mcdonalds-Philippines-373232912863211%2F&amp;psig=AOvVaw2ygsX7yfXCI2sZ6LGn7nXf&amp;ust=1539272605669687.
+        /// </summary>
+        internal static string String {
+            get {
+                return ResourceManager.GetString("String", resourceCulture);
+            }
+        }
     }
 }

@@ -51,6 +51,9 @@
             this.numberOfBurger = new System.Windows.Forms.TextBox();
             this.newOrder = new System.Windows.Forms.Button();
             this.warningText = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // changeAmount
@@ -112,10 +115,10 @@
             // paidAmount
             // 
             this.paidAmount.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paidAmount.Location = new System.Drawing.Point(155, 355);
+            this.paidAmount.Location = new System.Drawing.Point(152, 355);
             this.paidAmount.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.paidAmount.Name = "paidAmount";
-            this.paidAmount.Size = new System.Drawing.Size(63, 18);
+            this.paidAmount.Size = new System.Drawing.Size(66, 18);
             this.paidAmount.TabIndex = 13;
             // 
             // totalPrice
@@ -227,19 +230,19 @@
             // numberOfDrinks
             // 
             this.numberOfDrinks.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numberOfDrinks.Location = new System.Drawing.Point(155, 129);
+            this.numberOfDrinks.Location = new System.Drawing.Point(152, 129);
             this.numberOfDrinks.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.numberOfDrinks.Name = "numberOfDrinks";
-            this.numberOfDrinks.Size = new System.Drawing.Size(63, 18);
+            this.numberOfDrinks.Size = new System.Drawing.Size(66, 18);
             this.numberOfDrinks.TabIndex = 2;
             // 
             // numberOfFries
             // 
             this.numberOfFries.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numberOfFries.Location = new System.Drawing.Point(155, 79);
+            this.numberOfFries.Location = new System.Drawing.Point(152, 79);
             this.numberOfFries.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.numberOfFries.Name = "numberOfFries";
-            this.numberOfFries.Size = new System.Drawing.Size(63, 18);
+            this.numberOfFries.Size = new System.Drawing.Size(66, 18);
             this.numberOfFries.TabIndex = 1;
             // 
             // numberOfBurger
@@ -265,20 +268,51 @@
             // 
             // warningText
             // 
+            this.warningText.BackColor = System.Drawing.Color.Gold;
             this.warningText.Font = new System.Drawing.Font("Lucida Console", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.warningText.Location = new System.Drawing.Point(11, 1);
+            this.warningText.Location = new System.Drawing.Point(11, 304);
             this.warningText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.warningText.Name = "warningText";
-            this.warningText.Size = new System.Drawing.Size(176, 30);
+            this.warningText.Size = new System.Drawing.Size(246, 26);
             this.warningText.TabIndex = 22;
-            this.warningText.Text = "Please DO NOT Order Excesive Amounts Of FOOD";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Gold;
+            this.label1.Location = new System.Drawing.Point(222, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 538);
+            this.label1.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.Image = global::CashRegister.Properties.Resources.download__2_;
+            this.label2.Location = new System.Drawing.Point(263, 341);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(184, 126);
+            this.label2.TabIndex = 24;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label4.Font = new System.Drawing.Font("Poplar Std", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(440, 413);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 24);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "LITE";
             // 
             // mcdonaldsLite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Red;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(530, 556);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.warningText);
             this.Controls.Add(this.newOrder);
             this.Controls.Add(this.changeAmount);
@@ -304,7 +338,6 @@
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "mcdonaldsLite";
             this.Text = "McDonalds Lite";
-            this.Shown += new System.EventHandler(this.burgerTim_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,6 +367,9 @@
         private System.Windows.Forms.TextBox numberOfBurger;
         private System.Windows.Forms.Button newOrder;
         private System.Windows.Forms.Label warningText;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
     }
 }
 

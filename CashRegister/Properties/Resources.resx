@@ -121,4 +121,13 @@
   <data name="cash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\378269__13gpanska-jirova-tereza__16-cash-register-closing.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="download__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mcdonalds" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mcdonalds.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>https://www.google.ca/url?sa=i&amp;rct=j&amp;q=&amp;esrc=s&amp;source=images&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwjAwqiRnPzdAhWkq4MKHQ3VDYMQjRx6BAgBEAU&amp;url=https%3A%2F%2Fwww.facebook.com%2FGolden-Arches-Development-Corp-Mcdonalds-Philippines-373232912863211%2F&amp;psig=AOvVaw2ygsX7yfXCI2sZ6LGn7nXf&amp;ust=1539272605669687</value>
+  </data>
 </root>
