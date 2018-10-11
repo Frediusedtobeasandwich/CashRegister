@@ -13,7 +13,7 @@ using System.Media;
 namespace CashRegister
     //Fred Hammerl
 {
-    public partial class mcdonaldsLite : Form // This is where all variables are set up
+    public partial class mcdonaldsLite : Form // This is where all variables are set up //
     {
         double burgerNumber;
         double friesNumber;
