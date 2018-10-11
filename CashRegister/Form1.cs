@@ -11,8 +11,9 @@ using System.Threading;
 using System.Media;
 
 namespace CashRegister
+    //Fred Hammerl
 {
-    public partial class mcdonaldsLite : Form
+    public partial class mcdonaldsLite : Form // This is where all variables are set up
     {
         double burgerNumber;
         double friesNumber;
@@ -35,16 +36,16 @@ namespace CashRegister
             InitializeComponent();
         }
 
-        private void calculateTotal_Click(object sender, EventArgs e)
+        private void calculateTotal_Click(object sender, EventArgs e) // This function is where we calculate the total
         {
             try
             {
-                burgerNumber = Convert.ToInt16(numberOfBurger.Text);
+                burgerNumber = Convert.ToInt16(numberOfBurger.Text); // converts the text into an actual number
                 friesNumber = Convert.ToInt16(numberOfFries.Text);
                 drinkNumber = Convert.ToInt16(numberOfDrinks.Text);
             }
 
-            catch
+            catch // if all values are set to zero, it makes sure it doesn't crash
             {
                 subPrice.Text = "0";
                 taxPrice.Text = "0";
@@ -52,7 +53,7 @@ namespace CashRegister
                 warning.Text = "Check Values";
             }
 
-            burgerCost = burgerNumber * BURGER_COST;
+            burgerCost = burgerNumber * BURGER_COST; // does some math
             friesCost = friesNumber * FRIES_COST;
             drinkCost = drinkNumber * DRINKS_COST;
             subCost = burgerCost + friesCost + drinkCost;
@@ -61,13 +62,13 @@ namespace CashRegister
             warning.Text = "";
 
             tax = subCost * HST;
-            taxPrice.Text = tax.ToString("C");
+            taxPrice.Text = tax.ToString("C"); // displays the tax total
 
             totalCost = subCost + tax;
-            totalPrice.Text = totalCost.ToString("C");
+            totalPrice.Text = totalCost.ToString("C"); // displays the entire total (tax plus subPrice)
         }
 
-        private void calculateChange_Click(object sender, EventArgs e)
+        private void calculateChange_Click(object sender, EventArgs e) // this bit reads how much you paid
         {
             try
             {
@@ -76,31 +77,31 @@ namespace CashRegister
 
             catch
             {
-                changeAmount.Text = "";
+                changeAmount.Text = ""; 
             }
 
 
             change = paidNumber - totalCost;
-            changeAmount.Text = change.ToString("C");
+            changeAmount.Text = change.ToString("C"); // displays the change. Will put in brackets if you still owe me money
         }
 
-        private void printReciept_Click(object sender, EventArgs e)
+        private void printReciept_Click(object sender, EventArgs e) // this function makes the reciept
         {
-            Graphics g = this.CreateGraphics();
+            Graphics g = this.CreateGraphics(); // sets up the graphics used to make the reciept
             Font reciept = new Font("Lucida Console", 8, FontStyle.Regular);
             SolidBrush penColor = new SolidBrush(Color.Black);
             SolidBrush recieptBackColor = new SolidBrush(Color.White);
 
-            SoundPlayer register = new SoundPlayer(Properties.Resources.cash);
-
             g.FillRectangle(penColor, 270, 10, 250, 300);
             g.FillRectangle(recieptBackColor, 275, 15, 240, 290);
 
+            SoundPlayer register = new SoundPlayer(Properties.Resources.cash); // sets the sound as the one 
+
+            register.Play(); // makes the sound
+            Thread.Sleep(700); // waits
             register.Play();
-            Thread.Sleep(700);
-            register.Play();
-            g.DrawString("McDonalds Lite", reciept, penColor, 340, 40);
-            Thread.Sleep(700);
+            g.DrawString("McDonalds Lite", reciept, penColor, 340, 40); // writes the thing in the quotation marks with the selected pen at the selected location
+            Thread.Sleep(700); // rinse and repeat
             register.Play();
             g.DrawString("Order Number 6488", reciept, penColor, 275, 70);
             Thread.Sleep(700);
@@ -125,7 +126,7 @@ namespace CashRegister
             register.Play();
             Thread.Sleep(700);
 
-            g.DrawString("Sub Total:", reciept, penColor, 275, 180);
+            g.DrawString("Sub Total:", reciept, penColor, 275, 180); // keep rinsing and repeating
             g.DrawString(subCost.ToString("C"), reciept, penColor, 380, 180);
             register.Play();
             Thread.Sleep(700);
@@ -151,17 +152,17 @@ namespace CashRegister
 
             g.DrawString("Have A Day :(", reciept, penColor, 275, 285);
             register.Play();
-            Thread.Sleep(700);
+            Thread.Sleep(700); // now you're done with the rinsing and repeating
         }
 
-        private void newOrder_Click(object sender, EventArgs e)
+        private void newOrder_Click(object sender, EventArgs e) // resets everything
         {
-            Graphics g = this.CreateGraphics();
+            Graphics g = this.CreateGraphics(); 
             SolidBrush backColor = new SolidBrush(Color.Red);
-            backColor.Color = Color.FromArgb(160, 192, 0, 0);
+            backColor.Color = Color.FromArgb(160, 192, 0, 0); // makes a bit of red
 
-            numberOfBurger.Text = "";
-            burgerNumber = 0;
+            numberOfBurger.Text = ""; // resets all text
+            burgerNumber = 0; // sets integers to zero
             numberOfDrinks.Text = "";
             drinkNumber = 0;
             numberOfFries.Text = "";
@@ -170,9 +171,9 @@ namespace CashRegister
             taxPrice.Text = "";
             totalPrice.Text = "";
             paidAmount.Text = "";
+            change = 0;
             changeAmount.Text = "";
-            g.FillRectangle(backColor, 270, 10, 250, 300);
+            g.FillRectangle(backColor, 270, 10, 250, 300); // puts that bit of red over the reciept
         }
-
     }
 }
